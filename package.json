@@ -1,0 +1,37 @@
+{
+  "name": "query",
+  "version": "1.0.0",
+  "description": "SQL-like query support for arbitary collections",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-util/query.git"
+  },
+  "keywords": [
+    "SQL",
+    "query",
+    "collections"
+  ],
+  "author": "js-util,picocreator",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/js-util/query/issues"
+  },
+  "homepage": "https://github.com/js-util/query#readme",
+
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/jest": "^29.5.10",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2"
+  }
+}
