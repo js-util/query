@@ -279,8 +279,9 @@ export default abstract class Query {
 	
 	/**
 	 * Extract out the respective query keys, and values
+	 * [This is implemented internally by the respective subclasses]
 	 **/
-	protected abstract _keyValuesMap(mapToReturn: Map<string, Object[]>): Map<string, Object[]>;
+	public abstract _keyValuesMap(mapToReturn: Map<string, Object[]>): Map<string, Object[]>;
 
 	//--------------------------------------------------------------------
 	// Aggregation on search

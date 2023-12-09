@@ -137,6 +137,9 @@ export abstract class CombinationBase extends Query {
 		return "AND";
 	}
 
+	/**
+	 * The query string
+	 **/
 	public toString(): string {
 		let ret = "";
 
@@ -154,9 +157,17 @@ export abstract class CombinationBase extends Query {
 		return ret.trim();
 	}
 
-	public keyValuesMap(mapToReturn: Map<string, any[]>): Map<string, any[]> {
+	//
+	// Name value pair extraction from query
+	//--------------------------------------------------------------------
+	
+	/**
+	 * Extract out the respective query keys, and values
+	 * [This is implemented internally by the respective subclasses]
+	 **/
+	public _keyValuesMap(mapToReturn: Map<string, any[]>): Map<string, any[]> {
 		this._children.forEach(child => {
-			mapToReturn = child.keyValuesMap(mapToReturn);
+			mapToReturn = child._keyValuesMap(mapToReturn);
 		});
 		return mapToReturn;
 	}

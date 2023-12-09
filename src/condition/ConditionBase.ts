@@ -222,8 +222,9 @@ export abstract class ConditionBase extends Query {
 	
 	/**
 	 * Extract out the respective query keys, and values
+	 * [This is implemented internally by the respective subclasses]
 	 **/
-	protected _keyValuesMap(mapToReturn: Map<string, any[]>): Map<string, any[]> {
+	public _keyValuesMap(mapToReturn: Map<string, any[]>): Map<string, any[]> {
 		const key = this._fieldName;
 		if (!key) {
 			return mapToReturn;
